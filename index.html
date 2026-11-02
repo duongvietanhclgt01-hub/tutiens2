@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tu Tiên Online – Tiên Đồ Vô Tận</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<canvas id="bg"></canvas>
+<header id="top">
+ <div class="who"><svg class="av" viewBox="0 0 40 40"><circle cx="20" cy="20" r="19" fill="#0b2a2e" stroke="#d9b45a"/><circle cx="20" cy="15" r="6" fill="#e8cfa6"/><path d="M7 36q13-18 26 0z" fill="#3fa79a"/><path d="M14 11q6-8 12 0l-2 3h-8z" fill="#141a2e"/></svg>
+ <div><b id="tName"></b><small id="tRealm"></small></div></div>
+ <div class="stats"><span>Linh thạch <b id="tStone"></b></span><span>Thọ nguyên <b id="tLife"></b></span><span>Chiến lực <b id="tPower"></b></span></div>
+</header>
+<main id="stage">
+ <div id="aura"></div>
+ <svg id="array" viewBox="-200 -200 400 400"><g class="r1"><circle r="190" fill="none" stroke="#d9b45a" stroke-width="2"/><circle r="175" fill="none" stroke="#6fe3d0" stroke-dasharray="4 10"/></g>
+ <g class="r2"><polygon points="0,-160 139,80 -139,80" fill="none" stroke="#b58cff" stroke-width="2"/><polygon points="0,160 139,-80 -139,-80" fill="none" stroke="#b58cff" stroke-width="2"/></g>
+ <g class="r3"><circle r="110" fill="none" stroke="#d9b45a" stroke-dasharray="14 6" stroke-width="3"/><circle r="70" fill="none" stroke="#6fe3d0" stroke-width="2"/></g></svg>
+ <svg id="hero" viewBox="0 0 200 220"><defs><linearGradient id="rb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5fd6c4"/><stop offset="1" stop-color="#1b4f73"/></linearGradient></defs>
+ <path d="M100 100C60 110 20 170 8 205q92 22 184 0C180 170 140 110 100 100z" fill="url(#rb)" stroke="#d9b45a" stroke-width="2"/>
+ <path d="M70 130q30 25 60 0" fill="none" stroke="#d9b45a" stroke-width="2"/>
+ <ellipse cx="100" cy="62" rx="20" ry="23" fill="#f0d9b5"/><path d="M78 58q4-34 44 0q-6-14-22-16q-16 2-22 16z" fill="#12172b"/><path d="M96 38h8v-14h-8z" fill="#d9b45a"/>
+ <path d="M62 150q18-22 38-8M138 150q-18-22-38-8" fill="none" stroke="#f0d9b5" stroke-width="9" stroke-linecap="round"/><circle cx="100" cy="146" r="9" fill="#fff6c0" class="orb"/></svg>
+ <section id="info"><div id="rname"></div><div id="rlayer"></div>
+  <div class="bar"><i id="xpbar"></i><span id="xptxt"></span></div>
+  <div id="qirate"></div>
+  <button id="bClick">VẬN CÔNG</button> <button id="bBreak" hidden>ĐỘT PHÁ</button></div></section>
+ <div id="ticker"></div>
+</main>
+<div id="panel" hidden><div class="pbox"><button id="pclose">✕</button><div id="pbody"></div></div></div>
+<div id="fx" hidden><div id="fxt"></div></div>
+<div id="trib" hidden><div class="tb"><h2>Độ Thiên Kiếp</h2><div class="bar hp"><i id="hp"></i><span id="hpt"></span></div><div class="bar sh"><i id="sh"></i><span id="sht"></span></div><p id="tmsg"></p><button id="tgo">Nghênh kiếp</button></div></div>
+<nav id="nav"></nav>
+<script src="supabase-config.js"></script>
+<script src="game.js"></script>
+<script src="world.js"></script>
+</body></html>
